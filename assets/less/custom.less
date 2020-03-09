@@ -1,0 +1,482 @@
+body,
+html {
+  font-family: "Montserrat", "SFUIText", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  // font-style: normal;
+  // line-height: 27px;
+  // color: @c-383;
+  // background-image: url("../images/kiddie-website-background-2.jpg");
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: 0 1%;
+  height: 100%;
+  width: 100%;
+}
+
+//Màn hình Moblie
+@screen-tablet: 768px;
+@screen-mobile: 575px;
+@screen-mw-desktop: (@screen-mobile + 1);
+
+.visible-desktop {
+  @media (max-width: @screen-mobile) {
+    display: none !important;
+  }
+}
+.visible-mobi {
+  @media (min-width: @screen-mw-desktop) {
+    display: none !important;
+  }
+}
+
+.section-title {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 38px;
+  font-weight: semiBold;
+}
+
+.text-and-link {
+  padding-top: 24px;
+  a {
+    text-decoration: underline;
+    color: #fff;
+    img {
+      padding-left: 10px;
+    }
+  }
+}
+
+.cross-line {
+  border-top: 1px solid #979797;
+}
+
+.c-white {
+  color: #fff;
+}
+
+.navbar-kiddi {
+  a.navbar-brand {
+    img {
+      width: 100%;
+    }
+  }
+  .navbar-expand-lg {
+    .navbar-collapse {
+      .navbar-nav {
+        .nav-item {
+          padding: 0 8px;
+          line-height: 20px;
+          &.active {
+            font-weight: bold;
+          }
+          .nav-link {
+            text-transform: uppercase;
+            color: #000;
+            .icon-facebook {
+              color: #3b5999;
+            }
+            .icon-youtube {
+              color: #cd201f;
+            }
+          }
+          .social-icon {
+            font-size: 25px;
+          }
+          @media (max-width: @screen-tablet) {
+            font-size: 18px;
+            border-bottom: 1px dashed #979797;
+            padding: 16px 24px;
+            text-align: center;
+            width: 88%;
+            margin-left: 6%;
+          }
+        }
+        .social-icon {
+          padding-left: 47px;
+          @media (max-width: @screen-tablet) {
+            padding-left: 0;
+          }
+          li {
+            border-bottom: none;
+            margin: 0;
+            a {
+              padding: 5px;
+              @media (max-width: @screen-tablet) {
+                padding: 15px;
+              }
+              span {
+                @media (max-width: @screen-tablet) {
+                  font-size: 36px;
+                }
+              }
+            }
+          }
+          @media (max-width: @screen-mobile) {
+            justify-content: center;
+          }
+        }
+        &.active {
+          color: #000;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+.backgound-index {
+  background-image: url("../images/Kiddie-Website-Background-cloud.png");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: -100px -100px;
+  @media (max-width: @screen-mobile) {
+    background-position: 45% 0;
+  }
+  .left {
+    margin-top: 150px;
+    @media (max-width: @screen-mobile) {
+      margin-top: 50px;
+    }
+    .backgound-title {
+      color: #fff;
+      line-height: 31px;
+      font-size: 20px;
+      width: 71%;
+      margin-left: auto;
+    }
+  }
+  .backgound-title {
+    margin-top: 13px;
+  }
+  .dowload-app-button {
+    margin-top: 27px;
+    display: flex;
+    a {
+      width: 188px;
+      height: 66px;
+    }
+  }
+  .right {
+    margin-top: 150px;
+    position: relative;
+    @media (max-width: @screen-mobile) {
+      margin-top: 0;
+    }
+    img {
+      position: absolute;
+      &.kid {
+        z-index: 1;
+        @media (max-width: @screen-tablet) {
+          width: 80%;
+        }
+      }
+      &.ball {
+        top: 85px;
+        right: 114px;
+        @media (max-width: @screen-tablet) {
+          width: 90%;
+          top: 70px;
+          right: 10px;
+        }
+      }
+      &.alphabet {
+        top: 330px;
+        right: 80px;
+        @media (max-width: @screen-tablet) {
+          width: 32%;
+          top: 250px;
+          right: 0;
+        }
+      }
+    }
+  }
+  .croll-down-button {
+    @keyframes animationScroll {
+      0% {
+        opacity: 0;
+      }
+      80% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    cursor: pointer;
+    position: absolute;
+    bottom: 90px;
+    right: 50%;
+    transform: translateX(100%);
+    .text-center {
+      transform: translateX(-37%);
+      margin-bottom: 13px;
+      font-size: 18px;
+    }
+    a {
+      animation: animationScroll 2s linear infinite;
+    }
+  }
+}
+
+.section {
+  .section-1 {
+    padding-top: 95px;
+    @media (max-width: @screen-mobile) {
+      padding-top: 150px;
+    }
+    .section-1-content {
+      padding-top: 53px;
+      .content-right {
+        font-size: 16px;
+        .content-2 {
+          padding-top: 40px;
+          a.content-link {
+            color: #62c3c6;
+          }
+        }
+        .video-link {
+          padding-top: 14px;
+          a {
+            color: #000;
+            text-decoration: underline;
+            img {
+              padding-left: 10px;
+            }
+          }
+        }
+        .source {
+          padding-top: 38px;
+          color: #c5c6ce;
+        }
+      }
+    }
+  }
+  .section-2 {
+    background-color: #71cace;
+    position: relative;
+    color: #fff;
+    margin-top: 262px;
+    .section-about-us {
+      padding-top: 95px;
+      .first {
+        @media (max-width: @screen-mobile) {
+          order: -1;
+          margin-top: 30px;
+        }
+      }
+      .second {
+        @media (max-width: @screen-mobile) {
+          order: 13;
+        }
+      }
+      .title-about-us {
+        font-weight: bold;
+        font-size: 28px;
+      }
+      .text-about-us {
+        padding-top: 13px;
+      }
+      .image-about-us {
+        transform: translateY(-17%);
+      }
+    }
+    .bg-top {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      transform: translateY(-172.6px);
+      background-repeat: no-repeat;
+      background-image: url(../images/group-11.png);
+    }
+    .bg-bottom {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      bottom: -100%;
+      background-repeat: no-repeat;
+      background-image: url("../images/group-12.png");
+    }
+  }
+  .section-3 {
+    margin-top: 295px;
+    .title-four-step {
+      font-size: 18px;
+      font-weight: 600;
+      padding-top: 48px;
+      margin-left: auto;
+    }
+    .content-four-step {
+      padding-top: 10px;
+    }
+    .note-four-step {
+      padding-top: 20px;
+      color: #c5c6ce;
+    }
+    .carousel-indicators {
+      bottom: -95px;
+      li {
+        text-indent: initial;
+        border-radius: 100%;
+        height: 50px;
+        width: 50px;
+        margin: 0 42.5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        border: 1px solid #979797;
+        font-size: 18px;
+        &.active {
+          background-color: #64c5c9;
+          border: none;
+          color: #fff;
+          font-weight: bold;
+        }
+        @media (max-width: @screen-tablet) {
+          margin: 0 15px;
+        }
+        @media (max-width: @screen-mobile) {
+          margin: 0 7px;
+        }
+      }
+    }
+  }
+  .section-4 {
+    margin-top: 140px;
+    .carousel {
+      .carousel-inner {
+        .image-prople-say {
+          text-align: right;
+          @media (max-width: @screen-mobile) {
+            text-align: center;
+          }
+        }
+        .title-people-say {
+          padding-top: 50px;
+          font-size: 18px;
+        }
+        .infor-people-say {
+          color: #8d90a3;
+          font-size: 12px;
+          margin-top: 5px;
+        }
+        .content-people-say {
+          margin-top: 15px;
+        }
+      }
+      .carousel-indicators {
+        margin-top: 30px;
+        position: relative;
+        li {
+          height: 9px;
+          width: 9px;
+          border-radius: 100%;
+          margin: 5px;
+          overflow: hidden;
+          border: 2px solid #979797;
+          background-color: transparent;
+          @media (max-width: @screen-tablet) {
+            height: 18px;
+            width: 18px;
+          }
+          @media (max-width: @screen-mobile) {
+            height: 21px;
+            width: 21px;
+          }
+        }
+        @keyframes slider-icon {
+          from {
+            transform: translateY(100%);
+          }
+          to {
+            transform: translateY(0);
+          }
+        }
+        .active {
+          position: relative;
+          border: none;
+          height: 12px;
+          width: 12px;
+          &:after {
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #64c5c9;
+            animation: slider-icon 0.4s forwards;
+          }
+          @media (max-width: @screen-tablet) {
+            height: 21px;
+            width: 21px;
+          }
+          @media (max-width: @screen-mobile) {
+            height: 24px;
+            width: 24px;
+          }
+        }
+        a {
+          @media (max-width: @screen-tablet) {
+            margin: 0 -6%;
+            font-size: 18px;
+          }
+          @media (max-width: @screen-mobile) {
+            margin: 0 -20%;
+            font-size: 21px;
+          }
+        }
+        .carousel-control-prev {
+          position: absolute;
+          color: #000;
+          left: 38%;
+        }
+        .carousel-control-next {
+          position: absolute;
+          color: #000;
+          right: 38%;
+        }
+      }
+    }
+  }
+}
+
+//Footer
+.content-footer {
+  background-image: url(../images/group-9.png);
+  background-repeat: no-repeat;
+  margin-top: 116px;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  color: #fff;
+  @media (max-width: @screen-mobile) {
+    background-position: 37% 0;
+  }
+  .logo-footer {
+    text-align: center;
+    padding-top: 220px;
+  }
+  .social-link {
+    display: flex;
+    justify-content: center;
+    font-size: 46px;
+  }
+  .kiddi-information {
+    margin-top: 47px;
+    .content {
+      padding-top: 16px;
+      line-height: 27px;
+    }
+  }
+  .kiddi-bottom {
+    padding: 100px 0 57px 0;
+  }
+}
